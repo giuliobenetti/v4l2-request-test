@@ -28,7 +28,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-#include <drm_fourcc.h>
+#include <drm/drm_fourcc.h>
 #include <xf86drm.h>
 #include <xf86drmMode.h>
 

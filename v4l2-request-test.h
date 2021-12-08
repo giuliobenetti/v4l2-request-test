@@ -23,9 +23,6 @@
 #include <linux/types.h>
 #include <linux/v4l2-controls.h>
 #include <linux/videodev2.h>
-#include <mpeg2-ctrls.h>
-#include <h264-ctrls.h>
-#include <hevc-ctrls.h>
 
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 #define TS_REF_INDEX(index) ((index) * 1000)
