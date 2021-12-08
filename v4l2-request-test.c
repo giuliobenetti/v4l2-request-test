@@ -31,7 +31,6 @@
 
 #include <drm/drm_fourcc.h>
 #include <linux/media.h>
-#include <linux/videodev2.h>
 #include <xf86drm.h>
 
 #include "v4l2-request-test.h"
