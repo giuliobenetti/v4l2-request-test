@@ -78,17 +78,18 @@ enum pct {
 
 union controls {
 	struct {
-		struct v4l2_ctrl_mpeg2_slice_params slice_params;
-		struct v4l2_ctrl_mpeg2_quantization quantization;
+		struct v4l2_ctrl_mpeg2_sequence sequence;
+		struct v4l2_ctrl_mpeg2_picture picture;
+		struct v4l2_ctrl_mpeg2_quantisation quantisation;
 	} mpeg2;
 #ifdef V4L2_PIX_FMT_H264_SLICE
 	struct {
 		struct v4l2_ctrl_h264_decode_params decode_params;
 		struct v4l2_ctrl_h264_pps pps;
-		struct v4l2_h264_pred_weight_table pred_weight;
 		struct v4l2_ctrl_h264_scaling_matrix scaling_matrix;
 		struct v4l2_ctrl_h264_slice_params slice_params;
 		struct v4l2_ctrl_h264_sps sps;
+		struct v4l2_ctrl_h264_pred_weights pred_weights;
 	} h264;
 #endif
 #ifdef V4L2_PIX_FMT_HEVC_SLICE
@@ -96,6 +97,7 @@ union controls {
 		struct v4l2_ctrl_hevc_sps sps;
 		struct v4l2_ctrl_hevc_pps pps;
 		struct v4l2_ctrl_hevc_slice_params slice_params;
+		struct v4l2_ctrl_hevc_decode_params decode_params;
 	} h265;
 #endif
 };
