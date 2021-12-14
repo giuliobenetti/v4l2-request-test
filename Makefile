@@ -21,7 +21,7 @@ PKG_CONFIG ?= pkg-config
 
 # Project
 
-NAME = v4l2-request-test
+NAME = test
 
 # Directories
 
