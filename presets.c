@@ -226,14 +226,14 @@ unsigned int frame_pct(struct preset *preset, unsigned int index)
 
 	switch (preset->type) {
 	case CODEC_TYPE_MPEG2:
-		type = preset->frames[index].frame.mpeg2.slice_params.picture.picture_coding_type;
+		type = preset->frames[index].frame.mpeg2.picture.picture_coding_type;
 
 		switch (type) {
-		case V4L2_MPEG2_PICTURE_CODING_TYPE_I:
+		case V4L2_MPEG2_PIC_CODING_TYPE_I:
 			return PCT_I;
-		case V4L2_MPEG2_PICTURE_CODING_TYPE_P:
+		case V4L2_MPEG2_PIC_CODING_TYPE_P:
 			return PCT_P;
-		case V4L2_MPEG2_PICTURE_CODING_TYPE_B:
+		case V4L2_MPEG2_PIC_CODING_TYPE_B:
 			return PCT_B;
 		default:
 			return PCT_I;
@@ -279,7 +279,7 @@ unsigned int frame_backward_ref_index(struct preset *preset, unsigned int index)
 
 	switch (preset->type) {
 	case CODEC_TYPE_MPEG2:
-		ts = preset->frames[index].frame.mpeg2.slice_params.backward_ref_ts;
+		ts = preset->frames[index].frame.mpeg2.picture.backward_ref_ts;
 		return INDEX_REF_TS(ts);
 	default:
 		return 0;
