@@ -28,7 +28,7 @@
 static struct frame bbb_mpeg2_frames[] = {
 #include "data/bbb-mpeg2/frames.h"
 };
-
+#ifdef ALL_PRESETS
 static struct frame bbb_happy_mpeg2_frames[] = {
 #include "data/bbb-happy-mpeg2/frames.h"
 };
@@ -60,6 +60,7 @@ static struct frame caminandes_fall_h265_frames[] = {
 #include "data/caminandes-fall-h265/frames.h"
 };
 #endif
+#endif
 
 static struct preset presets[] = {
 	{
@@ -74,6 +75,7 @@ static struct preset presets[] = {
 		.frames = bbb_mpeg2_frames,
 		.frames_count = ARRAY_SIZE(bbb_mpeg2_frames),
 	},
+#ifdef ALL_PRESETS
 	{
 		.name = "bbb-happy-mpeg2",
 		.description = "big_buck_bunny_1080p_MPEG2_MP2_25fps_6600K.MPG",
@@ -161,6 +163,7 @@ static struct preset presets[] = {
 		.frames = caminandes_fall_h265_frames,
 		.frames_count = ARRAY_SIZE(caminandes_fall_h265_frames),
 	},
+#endif
 #endif
 };
 
